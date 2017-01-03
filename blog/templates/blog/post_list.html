@@ -18,5 +18,14 @@
         	<p>I also bought from the Steam store Portal 1 & 2, FTL, and Undertale. I finally have Undertale, which I played a little of on my friend's computer, and I always wanted to know what's so great about Portal hahah</p>
         	<p>published: 1/02/2017</p>
         </div>
+
+        {% for p in posts %}
+        	<div>
+        		<h2>{{ p.title }}</h2>
+        		<p>{{ p.text|linebreaksbr }}</p>
+        		<p>published: {{ p.published_date }}</p>
+        	</div>
+        {% endfor %}
+        
     </body>
 </html>
